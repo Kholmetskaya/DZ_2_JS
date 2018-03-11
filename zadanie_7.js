@@ -5,20 +5,20 @@
 
 var num = +process.argv[2] , 
 array = [1, 3, 7, 0, 9, 45, -45, 4, 8];
+var newArr = [];
 var num1, num2;
 for (var i = 0; i < array.length; i++) {
 	for ( var j = 0; j < array.length; j++) {
 		if (array[i] + array[j] == num && array[j] > array[i]) {			
 			num1 = array[i];
 			num2 = array[j];
-			showMessage();
+			newArr.push(num1,num2+'\t');
         }  
     }
 }
 
-function showMessage() {
-    console.log(`Ваша пара чисел это:  ${num1}  и   ${num2} `); 
-  }
+console.log(`Ваша пара чисел это:  ${newArr} `); 
+ 
 
 
 
