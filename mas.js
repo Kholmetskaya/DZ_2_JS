@@ -1,10 +1,9 @@
 // Определяем пустой массив
 var array = [];
 // Вводим количество символов, которое мы хотим видеть на экране
-array[+process.argv[2]-1] = 1;
+var num = +process.argv[2];
 // Циклом перебираем длину массива и присваиваем значение для каждого элемента
-for(var i=0; i<array.length; i++){
-    array[i]="*";
+for(var i=0; i<num; i++){ 
+    array[i]="*";   
 }
-
 console.log(array);

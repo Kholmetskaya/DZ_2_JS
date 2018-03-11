@@ -4,15 +4,22 @@
 // Найти в массиве пару чисел которые в сумме бы дали это число
 
 var num = +process.argv[2] , 
-array = [1, 3, 7, 6, 9, 45, -45, 4, 8];
-
+array = [1, 3, 7, 0, 9, 45, -45, 4, 8];
+var num1, num2;
 for (var i = 0; i < array.length; i++) {
 	for ( var j = 0; j < array.length; j++) {
 		if (array[i] + array[j] == num && array[j] > array[i]) {			
-			console.log(`Ваша пара чисел это:  ${array[i]}  и   ${array[j]} `);
+			num1 = array[i];
+			num2 = array[j];
+			showMessage();
         }  
     }
 }
+
+function showMessage() {
+    console.log(`Ваша пара чисел это:  ${num1}  и   ${num2} `); 
+  }
+
 
 
 

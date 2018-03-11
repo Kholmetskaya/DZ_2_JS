@@ -3,9 +3,17 @@
 
 var num = +process.argv[2];
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var num1;
 for(var i=0; i<array.length; i++){
     switch(true){
         case num%array[i]==0:
-        console.log("Число кратно:" + array[i]);
-    }
+        num1 = array[i];
+        showMessage();
+    }  
 }
+
+function showMessage() {
+    console.log("Число кратно:" + num1); 
+  }
+
+
